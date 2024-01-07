@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+
+  h2:
+    console:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 750843133018-e8e8bkkb0j40mbsjo6funl0ljkqag6qb.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+jwt:
+  issuer: ajufresh@gmail.com
+  secretKey: yourNewBase64EncodedSecretKey
